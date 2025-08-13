@@ -287,3 +287,99 @@ blockquote{
   object-fit: cover;
   border-radius: var(--radius);
 }
+
+
+/* Tablets and down */
+@media (max-width: 900px){
+  :root{
+    --px:20px;
+    --grid-gap: var(--space-4);
+  }
+  .section{padding: var(--space-7) 0}
+  .section--tight{padding: var(--space-6) 0}
+  .hero{padding: var(--space-7) 0 var(--space-6)}
+  .card{padding: var(--space-4)}
+  .split .content{padding: var(--space-4)}
+  .nav{padding:12px var(--px)}
+  .navlinks a{padding:10px 12px}
+  .footer{padding: var(--space-5) var(--px); margin-top: var(--space-6)}
+  /* Image heights a bit smaller on tablets */
+  .card__media img{height: 220px}
+  .split .visual img{height: 300px}
+}
+
+/* Phones */
+@media (max-width: 600px){
+  :root{
+    --px:16px;
+    --grid-gap: var(--space-3);
+  }
+
+  /* Layout spacing */
+  .section{padding: var(--space-6) 0}
+  .section--tight{padding: var(--space-5) 0}
+  .grid{margin-top: var(--space-5); margin-bottom: var(--space-6)}
+
+  /* Typography rhythm */
+  .h1{margin: 8px 0 10px}
+  .h2{margin: 0 0 var(--space-2)}
+  .lead{max-width: 100%}
+  .prose{max-width: 100%}
+
+  /* Header / Nav stacks nicely */
+  .nav{
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px var(--px);
+  }
+  .brand{font-size:18px}
+  .navlinks{
+    width: 100%;
+    gap: 6px;
+    padding-bottom: 2px;
+  }
+  .navlinks a{
+    padding: 10px 12px;
+    font-weight: 800;
+  }
+  .nav-cta{
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .btn{
+    padding: 11px 14px;
+    border-radius: 10px;
+  }
+
+  /* Cards tighten up */
+  .card{padding: var(--space-3)}
+  .card__footer{margin-top: var(--space-3)}
+
+  /* Images scale for small screens */
+  .card__media img{height: 180px}
+  .split .visual img{height: 240px}
+
+  /* Split content breathing room */
+  .split{margin: var(--space-6) 0}
+  .split .content{padding: var(--space-3)}
+
+  /* Footer */
+  .footer{padding: var(--space-5) var(--px)}
+}
+
+/* Very small phones */
+@media (max-width: 400px){
+  :root{
+    --px:14px;
+  }
+  .navlinks a{
+    padding: 9px 10px;
+    border-radius: 10px;
+  }
+  .btn{
+    padding: 10px 12px;
+  }
+  .card__media img{height: 160px}
+  .split .visual img{height: 220px}
+}
+
